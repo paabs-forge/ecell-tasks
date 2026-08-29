@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="E-Cell UIET KUK startup showcase and pitch-event style landing page.">
+  <title>E-Cell UIET KUK — Startup Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="E-Cell UIET KUK home">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>E-CELL UIET KUK</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="mobile-menu">
+        <a href="#startups">Startups</a>
+        <a href="#about">About</a>
+        <a href="#submit">Pitch / Submit</a>
+        <a href="https://paabs-forge.github.io/ecell-tasks/task-2/" target="_blank" rel="noopener noreferrer">Official Site <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Startup Showcase / Pitch Event</p>
+          <h1 id="hero-title">Ideas worth building. <em>Builders worth meeting.</em></h1>
+          <p class="hero-text">
+            Explore the startups featured in this showcase, discover what they are building,
+            and find your own path to the pitch stage.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#startups">Explore Startups <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="#submit">Pitch Your Startup <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-note">A practice showcase built for the E-Cell UIET KUK club entrance task.</p>
+        </div>
+
+        <div class="showcase-visual reveal reveal-delay" aria-label="Illustration of a startup showcase event">
+          <div class="visual-grid" aria-hidden="true"></div>
+          <div class="event-card main-event-card">
+            <div class="event-card-top">
+              <span class="live-dot"></span>
+              <span>STARTUP SHOWCASE</span>
+              <span class="event-year">2026</span>
+            </div>
+            <div class="stage">
+              <div class="stage-line"></div>
+              <div class="stage-person">
+                <span class="person-head"></span>
+                <span class="person-body"></span>
+              </div>
+              <div class="stage-copy">
+                <span>THE NEXT</span>
+                <strong>BIG IDEA</strong>
+              </div>
+            </div>
+            <div class="event-card-footer">
+              <span>DISCOVER</span>
+              <span>EXPLORE</span>
+              <span>PITCH</span>
+            </div>
+          </div>
+
+          <div class="floating-mini mini-one">
+            <span class="mini-icon">01</span>
+            <div><b>Explore</b><small>New ideas</small></div>
+          </div>
+          <div class="floating-mini mini-two">
+            <span class="mini-icon">02</span>
+            <div><b>Connect</b><small>Meet builders</small></div>
+          </div>
+          <div class="visual-accent accent-one"></div>
+          <div class="visual-accent accent-two"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="context-strip" id="about" aria-label="Event context">
+      <div class="container context-grid">
+        <div class="context-intro">
+          <span class="context-kicker">THE SHOWCASE</span>
+          <strong>One place to discover what builders are creating.</strong>
+        </div>
+        <div class="context-item"><span>01</span><p>Emerging founders</p></div>
+        <div class="context-item"><span>02</span><p>Multiple startup domains</p></div>
+        <div class="context-item"><span>03</span><p>Pitch opportunities</p></div>
+      </div>
+    </section>
+
+    <section class="startups-section section" id="startups" aria-labelledby="startups-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Participating Startups</p>
+            <h2 id="startups-title">Meet the builders.</h2>
+          </div>
+          <p class="section-description">
+            Explore the teams and ideas represented in this project showcase. Use search or a domain filter to narrow the field.
+          </p>
+        </div>
+
+        <div class="explore-controls" aria-label="Startup search and filters">
+          <div class="search-wrap">
+            <label class="sr-only" for="startup-search">Search participating startups</label>
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="startup-search" type="search" placeholder="Search participating startups..." autocomplete="off">
+            <button class="clear-search" type="button" aria-label="Clear search" hidden>×</button>
+          </div>
+          <div class="filter-group" id="category-filters" aria-label="Filter startups by domain"></div>
+        </div>
+
+        <div class="results-meta">
+          <p id="results-count" aria-live="polite"></p>
+          <button class="text-button" id="clear-filters" type="button">Clear filters</button>
+        </div>
+
+        <div class="startup-grid" id="startup-grid"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <div class="empty-icon" aria-hidden="true">⌕</div>
+          <h3>No startups match your search.</h3>
+          <p>Try another search or reset the filters.</p>
+          <button class="button button-secondary" id="empty-clear" type="button">Clear filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pitch-cta section" id="pitch-cta" aria-labelledby="pitch-title">
+      <div class="container">
+        <div class="cta-panel">
+          <div class="cta-copy">
+            <p class="eyebrow eyebrow-light">Have something of your own?</p>
+            <h2 id="pitch-title">Your startup could be next.</h2>
+            <p>Have an idea you are building? Put it forward for a chance to join the showcase and step closer to the pitch stage.</p>
+            <a class="button button-light" href="#submit">Submit Your Startup <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="cta-graphic" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="cta-card">
+              <span class="cta-card-label">NEXT ON STAGE</span>
+              <strong>YOUR<br>IDEA</strong>
+              <span class="cta-arrow">↗</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="submit-section section" id="submit" aria-labelledby="submit-title">
+      <div class="container submit-grid">
+        <div class="submit-intro">
+          <p class="eyebrow">Join the Showcase</p>
+          <h2 id="submit-title">Pitch your startup.</h2>
+          <p>
+            Share the essentials of what you are building. This form is a frontend-only demonstration:
+            nothing is sent to a server or stored.
+          </p>
+          <div class="submit-points">
+            <div><span>01</span><p>Tell us who is building it.</p></div>
+            <div><span>02</span><p>Describe the problem and idea.</p></div>
+            <div><span>03</span><p>Give us a place to learn more, if you have one.</p></div>
+          </div>
+        </div>
+
+        <form class="startup-form" id="startup-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="founder-name">Founder / Team Name <span>*</span></label>
+              <input id="founder-name" name="founderName" type="text" autocomplete="name" placeholder="e.g. Team Nova">
+              <small class="field-error" id="founder-name-error"></small>
+            </div>
+            <div class="field">
+              <label for="startup-name">Startup Name <span>*</span></label>
+              <input id="startup-name" name="startupName" type="text" placeholder="e.g. Nova Labs">
+              <small class="field-error" id="startup-name-error"></small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="email">Email <span>*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+              <small class="field-error" id="email-error"></small>
+            </div>
+            <div class="field">
+              <label for="domain">Startup Domain <span>*</span></label>
+              <select id="domain" name="domain">
+                <option value="">Select a domain</option>
+                <option>AI</option>
+                <option>FinTech</option>
+                <option>HealthTech</option>
+                <option>EdTech</option>
+                <option>SaaS</option>
+                <option>Sustainability</option>
+                <option>Consumer</option>
+                <option>E-commerce</option>
+              </select>
+              <small class="field-error" id="domain-error"></small>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="description">Short Description <span>*</span></label>
+            <textarea id="description" name="description" rows="5" placeholder="What are you building, and what problem does it solve?"></textarea>
+            <div class="field-bottom">
+              <small class="field-error" id="description-error"></small>
+              <small class="char-count" id="char-count">0 / 300</small>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="website">Website / Link <small>(optional)</small></label>
+            <input id="website" name="website" type="url" placeholder="https://yourstartup.com">
+            <small class="field-error" id="website-error"></small>
+          </div>
+
+          <button class="button button-primary submit-button" type="submit">Submit for Review <span aria-hidden="true">↗</span></button>
+          <p class="form-demo-note">Demo only — no information is transmitted or stored.</p>
+          <div class="form-success" id="form-success" role="status" aria-live="polite" hidden>
+            <span aria-hidden="true">✓</span>
+            <div><strong>Thanks! Your startup idea has been noted for this demo.</strong><p>No data was sent or stored.</p></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">E</span><span>E-CELL UIET KUK</span></a>
+        <p class="footer-tagline">Startup Showcase</p>
+      </div>
+      <div class="footer-links">
+        <a href="#startups">Startups</a>
+        <a href="#submit">Submit Startup</a>
+        <a href="#about">About</a>
+        <a href="https://paabs-forge.github.io/ecell-tasks/task-2/" target="_blank" rel="noopener noreferrer">Official Site ↗</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>Built as part of an E-Cell UIET KUK club entrance task.</p>
+      <p>This is a practice/recruitment project and not an official E-Cell UIET KUK event website.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
