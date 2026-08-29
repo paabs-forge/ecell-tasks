@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Startup Pitch Competition — E-Cell Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <span class="brand">E-CELL</span>
+    <nav class="nav">
+      <a href="#about">Format</a>
+      <a href="#register">Register</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO / TICKET -->
+  <section class="ticket wrap" aria-label="Event overview">
+    <div class="ticket-card">
+      <div class="ticket-main">
+        <p class="eyebrow">UIET KUK</p>
+        <p class="eyebrow">Entrepreneurship Cell presents</p>
+        <h1>Startup Pitch<br>Competition</h1>
+        <p class="lede">Five minutes on stage. One idea. A panel that's actually listening.
+          Bring a problem worth solving and a plan that holds up under questions.</p>
+        <div class="ticket-facts">
+          <div><span class="fact-label">Date</span><span class="fact-val">20 September</span></div>
+          <div><span class="fact-label">Venue</span><span class="fact-val">Mechanical Block, UIET</span></div>
+          <div><span class="fact-label">Team size</span><span class="fact-val">3–6</span></div>
+        </div>
+        <a href="#register" class="btn btn-primary">Register your team</a>
+      </div>
+      <div class="ticket-stub">
+        <span class="stub-code">SPC · 26</span>
+        <span class="stub-note">Entries close<br>18 Sept, 11:59 PM</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAT -->
+  <section id="about" class="about wrap">
+    <h2>How it works</h2>
+    <div class="about-grid">
+      <div class="about-item">
+        <span class="about-num">Pitch</span>
+        <p>5 minutes on stage, followed by 3 minutes of questions from the judging panel.</p>
+      </div>
+      <div class="about-item">
+        <span class="about-num">Judged on</span>
+        <p>Clarity of the problem, feasibility, market understanding, and how well you handle questions.</p>
+      </div>
+      <div class="about-item">
+        <span class="about-num">Eligibility</span>
+        <p>Open to all currently enrolled students. Teams of 3 to 6, from any department or year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION FORM -->
+  <section id="register" class="register wrap">
+    <div class="form-card">
+      <h2>Register your team</h2>
+      <p class="form-sub">Fill this out once per team. You'll get a confirmation on screen — save your entry code.</p>
+
+      <div id="storage-notice" class="storage-notice" hidden>
+        Google Sheets isn't connected yet, so entries are only kept in this browser tab for now.
+        See <code>apps-script.gs</code> in the project files to switch this on.
+      </div>
+
+      <form id="reg-form" novalidate>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" autocomplete="name" placeholder="e.g. Ananya Sharma">
+          <p class="error" id="err-fullName" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="you@gmail.com">
+          <p class="error" id="err-email" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <div class="phone-input">
+            <span class="phone-prefix">+91</span>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="numeric" maxlength="10" placeholder="98765 43210">
+          </div>
+          <p class="error" id="err-phone" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="teamName">Team name</label>
+          <input type="text" id="teamName" name="teamName" placeholder="e.g. Team Northstar">
+          <p class="error" id="err-teamName" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="idea">Startup idea</label>
+          <textarea id="idea" name="idea" rows="4" placeholder="What problem are you solving, and for whom? A few sentences is enough."></textarea>
+          <div class="field-footer">
+            <p class="error" id="err-idea" role="alert"></p>
+            <span class="char-count" id="idea-count">0 / 500</span>
+          </div>
+        </div>
+
+        <p class="error submit-error" id="submit-error" role="alert" hidden></p>
+
+        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+          <span class="btn-label">Submit entry</span>
+        </button>
+      </form>
+
+      <div id="success-card" class="success-card" hidden>
+        <span class="success-code" id="success-code">SPC26-0000</span>
+        <h3 id="success-heading">You're registered.</h3>
+        <p id="success-msg">A confirmation has been recorded. Keep the code above — you'll need it at check-in.</p>
+        <button type="button" class="btn btn-ghost" id="reset-btn">Register another team</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>E-Cell · Startup Pitch Competition</span>
+    <span>Queries: ecell@college.edu</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
