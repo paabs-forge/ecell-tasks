@@ -415,3 +415,41 @@ h1, h2, h3 {
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
+
+
+/* ---------- dark theme text fixes ---------- */
+
+.form-card h2 {
+  color: #F4F7FB;
+}
+
+.form-card .form-sub {
+  color: #AEB8C8;
+}
+
+.success-card h3 {
+  color: #F4F7FB;
+}
+
+.success-card p {
+  color: #AEB8C8;
+}
+
+.success-card p code {
+  color: #E5E7EB;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.about-item p {
+  color: #AEB8C8;
+}
+
+.btn-ghost {
+  color: #F4F7FB;
+  border-color: #596170;
+}
+
+.btn-ghost:hover {
+  color: #FFFFFF;
+  border-color: #AEB8C8;
+}

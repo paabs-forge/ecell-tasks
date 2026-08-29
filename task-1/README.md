@@ -33,18 +33,14 @@ The task is a registration system for a fictional **Startup Pitch Competition**,
 
 ## Project Structure
 
-```text
 task-1/
-│
 ├── .vscode/
 │   └── settings.json
-│
 ├── index.html
 ├── style.css
 ├── script.js
 ├── apps-script.gs
 └── README.md
-```
 
 ---
 
@@ -60,6 +56,14 @@ Open `index.html` in a web browser.
 2. Open `index.html`.
 3. Start Live Server.
 4. Open the generated local URL in your browser.
+
+---
+
+## Live Demo
+
+Task 1 is deployed using GitHub Pages:
+
+[Open Task 1 Registration Page](https://paabs-forge.github.io/ecell-tasks/task-1/)
 
 ---
 
