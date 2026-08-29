@@ -129,13 +129,17 @@ E-cell-task2/
 
 ---
 
-## Running Locally
+## Running 
 
-### Option 1 — Open Directly
+### Option 1 — View Live
+
+Visit **[https://paabs-forge.github.io/ecell-tasks/task-2/]**
+
+### Option 2 — Open Directly
 
 Open `index.html` in a web browser.
 
-### Option 2 — VS Code Live Server
+### Option 3 — VS Code Live Server
 
 1. Open the project folder in VS Code.
 2. Open `index.html`.
